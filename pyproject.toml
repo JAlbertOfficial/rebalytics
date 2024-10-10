@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "rebalytics"
+version = "0.0.1"
+description = "Rebalytics is a data-driven project focused on exploring the potential of rebalancing strategies to generate outperformance in investment portfolios, specifically for small investors using savings plans and buy-and-hold strategies. The project aims to analyze and optimize different combinations of investment strategies and asset classes to determine which pairings work best. It also investigates the most effective rebalancing methods and frequencies, evaluating how these factors influence risk-adjusted returns. Through data analysis and simulations, Rebalytics seeks to provide insights into optimal asset allocation and rebalancing techniques that align with the long-term goals of small investors."
+authors = [
+  { name = "Julius Albert" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=3.12"
+
+[tool.black]
+line-length = 99
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+)/
+'''
+
+[tool.ruff.lint.isort]
+known_first_party = ["rebalytics"]
+force_sort_within_sections = true
